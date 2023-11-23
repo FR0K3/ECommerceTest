@@ -20,11 +20,6 @@ const ProductProvider = ({ children }) => {
         getProducts(category);
     }, [category]);
 
-    // useEffect(() => {
-    //     if (open)
-    //         document.body.style.overflow = 'unset';
-    // }, [open])
-
     const getProducts = async () => {
         const guitarsTemp = await projectServices.fetchProducts(category);
         setGuitars(guitarsTemp);
